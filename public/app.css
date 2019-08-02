@@ -362,6 +362,9 @@ body {
   padding: 6rem;
 }
 
+.btn-ordinary{
+  border-radius: 50%;
+}
 .btn,
 .btn:link,
 .btn:visited {
