@@ -220,40 +220,6 @@ app.setSessionToken = function(token){
   }
 };
 
-app.renewToken = function(callback){
-  var currentToken = typeof(app.config.sessionToken) == 'object' ? app.config.sessionToken : false;
-  if(currentToken){
-    // Update the token with a new expiration
-    var payload = {
-      'token_id' : currentToken.token_id,
-      'extend' : true
-    };
-    app.client.request(undefined,'api/tokens','PUT',undefined,payload,function(statusCode,responsePayload){
-      // Display an error on the form if needed
-      if(statusCode == 200){
-        // Get the new token details
-        var queryStringObject = {'token_id' : currentToken.token_id};
-        app.client.request(undefined,'api/tokens','GET',queryStringObject,undefined,function(statusCode,responsePayload){
-          // Display an error on the form if needed
-          if(statusCode == 200){
-            app.setSessionToken(responsePayload);
-            callback(false);
-          } else {
-            app.setSessionToken(false);
-            callback(true);
-          }
-        });
-      } else {
-        app.setSessionToken(false);
-        callback(true,responsePayload);
-      }
-    });
-  } else {
-    app.setSessionToken(false);
-    callback(true);
-  }
-};
-
 app.loadDataOnPage = function(){
   var bodyClasses = document.querySelector("body").classList;
   var primaryClass = typeof(bodyClasses[0]) == 'string' ? bodyClasses[0] : false;
