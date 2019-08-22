@@ -62,7 +62,6 @@ utils.trainingFunc = function(phrases){
 utils.displayPhrases = function(phrases){
     console.log(phrases);
     var phrasescontainer = document.querySelector('.phrases-container');
-    
     for(var i = 0; i < phrases.length; i++ ){
         phrasebox = document.createElement('div');
         phrasebox.className = 'phrasebox';

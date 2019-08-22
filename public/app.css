@@ -12,30 +12,54 @@ html {
 
 body {
   box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  /* font-size: 16px; */
+  line-height: 1.7;
+  color: #777;
 }
 
-.content{
-  max-width: 115rem;
-  min-height: 50rem;
+.phrases-manage{
+  background-color: #fff;
   display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.welcome-page{
+  max-width: 150rem;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .phrases-container{
-  flex: 0 0 50%;
+  flex: 0 0 40%;
   background-color: #ffffff;
   height: 70rem;
-  margin: 2rem;
+  margin: 2rem 2rem 2rem 6rem;
   display: flex;
   flex-direction: column;
 }
 
+.intro{
+  width: 45rem;
+  height: 6rem;
+  margin: 20rem 0;
+  font-size: 4rem;
+  text-align: center;
+}
+
 .input-container{
-  flex: 1;
+  flex: 0 0 40%;
   margin: 12rem 0 0 0;
-  background-color: #31476931;
+  padding: 3rem 2rem 2rem 2rem;
+  background-color: #d7dce2;
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
   border-radius: 4px;
-  max-height: 35rem;
+  height: 35rem;
 }
 
 .phrase{
@@ -84,6 +108,8 @@ body {
   text-align: center;
   cursor: pointer;
   position: absolute;
+  background-image: url(./delete-icon.png);
+  background-size: cover;
 }
 
 .phrases_train{
@@ -92,8 +118,6 @@ body {
   display: flex;
   flex-direction: column; 
   align-items: center;
-  
- 
 }
 
 #screen{
@@ -124,11 +148,29 @@ body {
   border-bottom: 3px solid transparent;
   width: 90%;
   display: block;
+  outline: none;
 }
 .btns{
   display: flex;
   margin: 2rem 0 0 0;
   justify-content: space-around;
+}
+
+.account-create{
+  max-width: 150rem;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 50rem;
+  width: 30rem;
 }
 
 @-webkit-keyframes moveInLeft {
@@ -235,14 +277,31 @@ body {
   }
 }
 
-body {
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
-  /* font-size: 16px; */
-  line-height: 1.7;
-  color: #777;
-  padding: 3rem;
+
+.heading-primary {
+  color: #253754;
+  text-transform: uppercase;
+  backface-visibility: hidden;
+  /* margin-bottom: 6rem;  */
 }
+  .heading-primary--main {
+    display: block;
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 3.5rem;
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    /*
+        animation-delay: 3s;
+        animation-iteration-count: 3;
+        */ }
+  .heading-primary--sub {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1.75rem;
+    animation: moveInRight 1s ease-out; }
 
 .heading-secondary {
   font-size: 3.5rem;
@@ -371,7 +430,7 @@ body {
   text-transform: uppercase;
   text-decoration: none;
   padding: 1.5rem 3.5rem;
-  margin: auto 1rem;
+  margin: 2.5rem 1rem;
   display: block;
   border-radius: 10rem;
   transition: all 0.2s;
@@ -491,11 +550,29 @@ body {
 }
 
 
-.form__group:not(:last-child) {
+/* .form__group:not(:last-child) {
   margin-bottom: 2rem;
   margin-left: 2rem;
+} */
+
+.form__input {
+  margin: 0 auto;
+  font-size: 2rem;
+  font-family: inherit;
+  color: inherit;
+  padding: 1.5rem 2rem;
+  border-radius: 2px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 1.5px solid rgba(82, 83, 97, 0.3);
+  width: 90%;
+  display: block;
 }
 
+
+.form__group:not(:last-child) {
+  margin: 0 2rem 2rem 2rem;
+}
+/* 
 .form__input {
   font-size: 2rem;
   font-family: inherit;
@@ -503,21 +580,33 @@ body {
   padding: 1.5rem 2rem;
   border-radius: 2px;
   background-color: rgba(255, 255, 255, 0.5);
-  border: none;
-  border-bottom: 3px solid transparent;
+  border: 1.5px solid rgba(82, 83, 97, 0.3);
   width: 90%;
   display: block;
 }
 
+.form__input:last-child{
+  margin-bottom: 4rem; 
+} */
+
 .form__input::-webkit-input-placeholder {
   color: #999;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 .form__input:focus {
   outline: none;
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
   border-bottom: 3px solid #5e82b9;
+}
+
+.input__label{
+  width: 30rem;
+  height: 3rem;
+  margin: .5rem 0 0 0;
+  text-align: center;
+  font-size: 1.5rem;
+  color: rgb(44, 38, 121);
 }
 
 .row {

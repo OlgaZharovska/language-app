@@ -1,39 +1,13 @@
-<section class="section-book">
- <div class="row">
-    <div class="book"> 
-        <div class="book__form">
-            <div class="form">
-                <div class="u-margin-bottom-medium">
-                   
-                </div>
-            
-                  <form id="accountCreate" action="/api/users" method="POST">
-                    <div class="formError"></div>
-                    <div class="form__group">
-                      <div class="inputLabel">First Name</div>
-                      <input type="text" name="firstName" class="form__input" placeholder="John" />
-                    </div>
-                    <div class="form__group">
-                      <div class="inputLabel">Last Name</div>
-                      <input type="text" name="lastName" class="form__input" placeholder="Smith" />
-                    </div>
-                    <div class="form__group">
-                      <div class="inputLabel">Phone Number</div>
-                      <input type="text" name="phone" class="form__input" placeholder="(415) 123-4567" />
-                    </div>
-                    <div class="form__group">
-                      <div class="inputLabel">Choose a Password</div>
-                      <input type="password" name="password" class="form__input" placeholder="Make it a good one!" />
-                    </div>
-                    <div class="form__group u-margin-bottom-medium">
-                       
-                    </div>
-                    <div class="form__group">
-                      <button type="submit" class="btn btn--green">Create Account</button>
-                    </div>
-                  </form>
-                </div>
-                </div>
-        </div>
-    </div>
-</section>
+<div class="account-create">
+  <form class="form" id="accountCreate" action="/api/users" method="POST">
+    <div class="input__label">First Name</div>
+    <input type="text" name="firstName" class="form__input" placeholder="Bohdan" />
+    <div class="input__label">Last Name</div>
+    <input type="text" name="lastName" class="form__input" placeholder="Oreiro" />
+    <div class="input__label">Phone Number</div>
+    <input type="text" name="phone" class="form__input" placeholder="*****" />
+    <div class="input__label">Choose a Password</div>
+    <input type="password" name="password" class="form__input" placeholder="Make it a good one!" />
+    <button type="submit" class="btn btn--green">Create Account</button>
+  </form>
+</div>

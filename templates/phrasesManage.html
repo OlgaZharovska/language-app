@@ -1,37 +1,21 @@
-<div class="content">
-  <div class="phrases-container">
-    <div class="phrasebox">
-        <div class="delete-btn"></div>
-        <div class="phrase heading-tertiary">Here should be a phrase</div>
-        <div class="translation heading-tertiary">Here should be translation</div>
-    </div>
-  </div>
+<div class="phrases-manage">
+  <div class="phrases-container"></div>
   <div class="input-container">
-     
-  <div class="u-margin-bottom-medium"></div>
+    <div class="u-margin-bottom-medium"></div>
     <form id="phrasesCreate" action="/api/phrases" method="POST">
       <div class="formError"></div>
-        <div class="form__group">
-          <div class="inputLabel">Phrase</div>
-            <input type="text" name="phrase" class="form__input" placeholder="" />
-           </div>
-        <div class="form__group">
-          <div class="inputLabel">Translation</div>
-           <input type="text" name="translation" class="form__input" placeholder="" />
-        </div>
-        <div class="form__group u-margin-bottom-medium"></div>
-         <div class="form__group">
-          <button type="submit" class="btn btn--green" id="phrase-btn">Add Phrase</button>
-        </div>
-     </form>            
+      <div class="form__group">
+        <input type="text" name="phrase" class="form__input" placeholder="" />
+      </div>
+      <div class="form__group">
+        <input type="text" name="translation" class="form__input" placeholder="" />
+      </div>
+      <div class="form__group u-margin-bottom-medium"></div>
+      <div class="form__group">
+        <button type="submit" class="btn btn--green" id="phrase-btn">Add Phrase</button>
+      </div>
+    </form>
   </div>
 </div>
 
 <script src="../public/phrasesutils.js"></script>
-
-
-      
-  
-
-
-

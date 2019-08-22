@@ -1,27 +1,9 @@
-<h1>Login To Your Account</h1>
-<h2>Enter your phone number and password</h2>
-
-<div class="form">
-    <div class="u-margin-bottom-medium">
-       
-    </div>
-
-      <form id="sessionCreate" action="/api/tokens" method="POST">
-        <div class="formError"></div>
-        <div class="form__group">
-            <div class="inputLabel">Phone Number</div>
-            <input type="text" name="phone" class="form__input" placeholder="(415) 123-4567" />
-        </div>
-        <div class="form__group">
-            <div class="inputLabel">Your Password</div>
-            <input type="password" name="password" class="form__input" placeholder="*********" />
-        </div>
-        <div class="form__group u-margin-bottom-medium">
-           
-        </div>
-        <div class="form__group">
-          <button type="submit" class="btn btn--green">Log In</button>
-        </div>
-      </form>
-    </div>
-    </div>
+<div class="account-create">
+    <form class="form" id="sessionCreate" action="/api/tokens" method="POST">
+        <div class="input__label">Phone Number</div>
+        <input type="text" name="phone" class="form__input" placeholder="*****" />
+        <div class="input__label">Password</div>
+        <input type="password" name="password" class="form__input" placeholder="password" />
+        <button type="submit" class="btn btn--green">Log In</button>
+    </form>
+</div>

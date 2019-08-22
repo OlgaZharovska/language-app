@@ -1,45 +1,34 @@
 <html>
-  <head>
 
-    <!-- General Settings -->
-    <meta charset="utf-8">
-    <meta http-equiv="content-language" content="en-us">
-    <base href="{global.baseUrl}" />
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="content-language" content="en-us">
+  <base href="{global.baseUrl}" />
+  <title>{head.title} | {global.appName}</title>
+  <meta name="description" content="{head.description}">
+  <link type="image/x-icon" rel="icon" href="favicon.ico">
+  <script type="text/javascript" charset="utf-8" src="public/app.js"></script>
+  <link rel="stylesheet" type="text/css" href="public/app.css" />
+</head>
 
-    <!-- Meta Tags -->
-    <title>{head.title} | {global.appName}</title>
-    <meta name="description" content="{head.description}">
+<body class="{body.class}">
 
-    <!-- Static Assets -->
-    <link type="image/x-icon" rel="icon" href="favicon.ico">
-    <script type="text/javascript" charset="utf-8" src="public/app.js"></script>
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
-    <link rel="stylesheet" type="text/css" href="public/app.css" />
+  <div class="navigation">
+    <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
 
-  </head>
-  <body class="{body.class}">
+    <label for="navi-toggle" class="navigation__button">
+      <span class="navigation__icon">&nbsp;</span>
+    </label>
 
-      <div class="navigation">
-          <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
+    <div class="navigation__background">&nbsp;</div>
 
-          <label for="navi-toggle" class="navigation__button">
-              <span class="navigation__icon">&nbsp;</span>
-          </label>
-
-          <div class="navigation__background">&nbsp;</div>
-              
-          <nav class="navigation__nav">
-              <ul class="navigation__list">
-                    <li class="loggedIn navigation__item"><a href="/phrases/manage" class="navigation__link">Manage phrases</a></li>
-                      <li class="loggedIn navigation__item"><a href="/phrases/train" class="navigation__link">Go training</a></li>
-                      <li class="loggedIn navigation__item" id="logoutButton"><a href="#" class="navigation__link">Logout</a></li>
-                      <li class="loggedOut navigation__item"><a href="/account/create" class="navigation__link">Sign Up</a></li>
-                      <li class="loggedOut navigation__item"><a href="/session/create" class="navigation__link">Log In</a></li>
-              </ul>
-          </nav>
-      </div>
-
-
- 
-          <!-- <div class="book__form"> -->
-
+    <nav class="navigation__nav">
+      <ul class="navigation__list">
+        <li class="loggedIn navigation__item"><a href="/phrases/manage" class="navigation__link">Manage phrases</a></li>
+        <li class="loggedIn navigation__item"><a href="/phrases/train" class="navigation__link">Go training</a></li>
+        <li class="loggedIn navigation__item" id="logoutButton"><a href="#" class="navigation__link">Logout</a></li>
+        <li class="loggedOut navigation__item"><a href="/account/create" class="navigation__link">Sign Up</a></li>
+        <li class="loggedOut navigation__item"><a href="/session/create" class="navigation__link">Log In</a></li>
+      </ul>
+    </nav>
+  </div>
